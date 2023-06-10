@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Pattern pattern = Pattern.compile("(?:\\d{1,3}\\.){3}\\d{1,3}");
+        Pattern pattern = Pattern.compile("^((\\d|1?\\d\\d|2([0-4]\\d|5[0-5]))\\.){3}(\\d|1?\\d\\d|2([0-4]\\d|5[0-5]))$");
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("ipTxt.txt"))) {
             while (true) {
